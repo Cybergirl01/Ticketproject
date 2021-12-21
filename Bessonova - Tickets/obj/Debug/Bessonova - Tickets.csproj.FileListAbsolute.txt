@@ -1,0 +1,12 @@
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\bin\Debug\Bessonova - Tickets.exe.config
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\bin\Debug\Bessonova - Tickets.exe
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\bin\Debug\Bessonova - Tickets.pdb
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.csproj.AssemblyReference.cache
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormAutorization.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormCreateNewPassword.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormRegistrationClients.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.Properties.Resources.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.csproj.GenerateResource.cache
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.csproj.CoreCompileInputs.cache
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.exe
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.pdb
