@@ -10,3 +10,7 @@ F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bess
 F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.csproj.CoreCompileInputs.cache
 F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.exe
 F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova - Tickets.pdb
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormAdmin.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormClient.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormOrganaiser.resources
+F:\мои данные\vs\Bessonova - Tickets\Bessonova - Tickets\obj\Debug\Bessonova___Tickets.FormSeller.resources
