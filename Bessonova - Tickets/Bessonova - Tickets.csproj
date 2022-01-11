@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.0.3541.23206, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +58,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBTicketDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormAddingEventsFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddingEventsFilm.Designer.cs">
+      <DependentUpon>FormAddingEventsFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddingEventsIceSkate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddingEventsIceSkate.Designer.cs">
+      <DependentUpon>FormAddingEventsIceSkate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +81,18 @@
     </Compile>
     <Compile Include="FormAutorization.Designer.cs">
       <DependentUpon>FormAutorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuyingTicketsFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuyingTicketsFilm.Designer.cs">
+      <DependentUpon>FormBuyingTicketsFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuyingTicketsIceSkate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuyingTicketsIceSkate.Designer.cs">
+      <DependentUpon>FormBuyingTicketsIceSkate.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClient.cs">
       <SubType>Form</SubType>
@@ -78,11 +106,59 @@
     <Compile Include="FormCreateNewPassword.Designer.cs">
       <DependentUpon>FormCreateNewPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistoryAct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistoryAct.Designer.cs">
+      <DependentUpon>FormHistoryAct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListofEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListofEvents.Designer.cs">
+      <DependentUpon>FormListofEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListofUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListofUsers.Designer.cs">
+      <DependentUpon>FormListofUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMoreinfoUserslist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMoreinfoUserslist.Designer.cs">
+      <DependentUpon>FormMoreinfoUserslist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMyTicketList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMyTicketList.Designer.cs">
+      <DependentUpon>FormMyTicketList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOrganaiser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormOrganaiser.Designer.cs">
       <DependentUpon>FormOrganaiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfileClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileClient.Designer.cs">
+      <DependentUpon>FormProfileClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfileOrganaiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileOrganaiser.Designer.cs">
+      <DependentUpon>FormProfileOrganaiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfileSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileSeller.Designer.cs">
+      <DependentUpon>FormProfileSeller.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegistrationClients.cs">
       <SubType>Form</SubType>
@@ -90,22 +166,64 @@
     <Compile Include="FormRegistrationClients.Designer.cs">
       <DependentUpon>FormRegistrationClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegWorkers.Designer.cs">
+      <DependentUpon>FormRegWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectPlaceEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectPlaceEvent.Designer.cs">
+      <DependentUpon>FormSelectPlaceEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSeller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSeller.Designer.cs">
       <DependentUpon>FormSeller.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSellingTicketsFilms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSellingTicketsFilms.Designer.cs">
+      <DependentUpon>FormSellingTicketsFilms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSellingticketsIceSkate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSellingticketsIceSkate.Designer.cs">
+      <DependentUpon>FormSellingticketsIceSkate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewTIcket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewTIcket.Designer.cs">
+      <DependentUpon>FormViewTIcket.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrganaiserBLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellerBLL.cs" />
     <Compile Include="TicketBLL.cs" />
+    <EmbeddedResource Include="FormAddingEventsFilm.resx">
+      <DependentUpon>FormAddingEventsFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddingEventsIceSkate.resx">
+      <DependentUpon>FormAddingEventsIceSkate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAutorization.resx">
       <DependentUpon>FormAutorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuyingTicketsFilm.resx">
+      <DependentUpon>FormBuyingTicketsFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuyingTicketsIceSkate.resx">
+      <DependentUpon>FormBuyingTicketsIceSkate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
@@ -113,14 +231,53 @@
     <EmbeddedResource Include="FormCreateNewPassword.resx">
       <DependentUpon>FormCreateNewPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHistoryAct.resx">
+      <DependentUpon>FormHistoryAct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListofEvents.resx">
+      <DependentUpon>FormListofEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListofUsers.resx">
+      <DependentUpon>FormListofUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMoreinfoUserslist.resx">
+      <DependentUpon>FormMoreinfoUserslist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMyTicketList.resx">
+      <DependentUpon>FormMyTicketList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOrganaiser.resx">
       <DependentUpon>FormOrganaiser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileClient.resx">
+      <DependentUpon>FormProfileClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileOrganaiser.resx">
+      <DependentUpon>FormProfileOrganaiser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileSeller.resx">
+      <DependentUpon>FormProfileSeller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistrationClients.resx">
       <DependentUpon>FormRegistrationClients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegWorkers.resx">
+      <DependentUpon>FormRegWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectPlaceEvent.resx">
+      <DependentUpon>FormSelectPlaceEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSeller.resx">
       <DependentUpon>FormSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSellingTicketsFilms.resx">
+      <DependentUpon>FormSellingTicketsFilms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSellingticketsIceSkate.resx">
+      <DependentUpon>FormSellingticketsIceSkate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewTIcket.resx">
+      <DependentUpon>FormViewTIcket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\NotPicture.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

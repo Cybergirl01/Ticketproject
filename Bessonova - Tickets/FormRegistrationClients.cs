@@ -33,5 +33,13 @@ namespace Bessonova___Tickets
                 this.textBoxPasReg.PasswordChar = '*';
             }
         }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            string newlogEmail = textBoxLogReg.Text;
+            string newpass = textBoxPasReg.Text;
+            ClientsBLL clientsBLL = new ClientsBLL();
+            clientsBLL.RegisterClient(newlogEmail, newpass);
+        }
     }
 }

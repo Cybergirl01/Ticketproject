@@ -33,6 +33,14 @@ namespace Bessonova___Tickets.Properties
         {
         }
 
+        internal static System.Drawing.Bitmap NotPicture
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("NotPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         /// <summary>
         ///   Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
         /// </summary>

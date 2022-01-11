@@ -61,6 +61,7 @@ namespace Bessonova___Tickets
             this.buttonConfirm.TabIndex = 24;
             this.buttonConfirm.Text = "Подтвердить";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // textBoxPasConfirm
             // 

@@ -145,6 +145,7 @@ namespace Bessonova___Tickets
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormCreateNewPassword fCNP = new FormCreateNewPassword();
+            fCNP.log = textBoxLog.Text;
             this.Hide();
             fCNP.ShowDialog();
             this.Show();

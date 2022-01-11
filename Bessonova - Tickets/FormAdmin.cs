@@ -21,5 +21,15 @@ namespace Bessonova___Tickets
         {
             this.Close();
         }
+
+        private void buttonRegWorkers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonListUsers_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

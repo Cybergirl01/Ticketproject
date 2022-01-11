@@ -60,6 +60,7 @@ namespace Bessonova___Tickets
             this.buttonRegister.TabIndex = 16;
             this.buttonRegister.Text = "Зарегистрироваться";
             this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // textBoxPasReg
             // 
