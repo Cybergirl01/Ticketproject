@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace Bessonova___Tickets
         public string price;
         public DateTime date;
         public string nameclient;
-        public int IDSeller;
+        public TimeSpan viewtime;
         public int IDEventPlace;
         public string title; 
 
@@ -30,14 +31,14 @@ namespace Bessonova___Tickets
             this.commandclient_seller = commandclient_seller;
 
         }
-        ClientsBLL Clientsbll = new ClientsBLL();
-        DBTicketDataSet.ClientProfDataTable clients;
-        TicketBLL tickets = new TicketBLL();
-        DBTicketDataSet.ClientProfRow ClientProfRow;
-        DBTicketDataSet.TicketsDataTable ticket;
-        DBTicketDataSet.TicketsRow rowticket;
+       // ClientsBLL Clientsbll = new ClientsBLL();
+        DBTicketDataSet.ClientDataTable clients;
+       // TicketBLL tickets = new TicketBLL();
+        DBTicketDataSet.ClientRow ClientProfRow;
+       /* DBTicketDataSet.TicketsDataTable ticket;
+        DBTicketDataSet.TicketsRow rowticket; - unused
         DBTicketDataSet.FilmTicketsDataTable filmTickets;
-        DBTicketDataSet.FilmTicketsRow FilmTicketsRow;
+        DBTicketDataSet.FilmTicketsRow FilmTicketsRow;*/
 
         private void buttonQRCode_Click(object sender, EventArgs e)
         {
@@ -59,6 +60,26 @@ namespace Bessonova___Tickets
             }
         }
 
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            printDialog1.ShowDialog();
+            PrintDocument def = new PrintDocument();
+            def.PrintPage += new PrintPageEventHandler(PRD);
+            def.DocumentName = "Document1";
+            def.PrinterSettings = printDialog1.PrinterSettings;
+            def.Print();
+
+
+        }
+
+        void PRD(object sender, PrintPageEventArgs e)
+        {
+            richTextBoxTicket.AppendText("Код: " + pictureBoxQR + Environment.NewLine);
+            Graphics g = e.Graphics;
+            g.DrawString(richTextBoxTicket.Text, Font, new SolidBrush(Color.Black), 0, 0);
+
+        }
+
         private void buttonGotoAutorization_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -72,13 +93,24 @@ namespace Bessonova___Tickets
                 case "seller":
                     if (IDEventPlace == 1)
                     {
-                      
-
                         richTextBoxTicket.AppendText("Билет: " + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Название: " + filmname + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Время просмотра: " + viewtime + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Зал: " + room + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Ряд: " + row + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Место: " + place + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Цена: " + price + Environment.NewLine);
                     }
                     else
                     {
-
+                        
+                        richTextBoxTicket.AppendText("Билет: " + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Название: " + title + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Время просмотра: " + viewtime + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Зал: " + room + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Ряд: " + row + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Место: " + place + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Цена: " + price + Environment.NewLine);
                     }
                         break;
 
@@ -86,7 +118,26 @@ namespace Bessonova___Tickets
                     if (IDEventPlace == 1)
                     {
 
-                        clients = clientProfTableAdapter1.GetData();
+                        clients = clientTableAdapter1.GetData();
+                        ClientProfRow = clients.FindByID(ClassforIDUsers.idU);
+                        string Clientfirstname = ClientProfRow.FirstName;
+                        string ClientLastname = ClientProfRow.LastName;
+
+
+                        richTextBoxTicket.AppendText("Имя: " + Clientfirstname + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Отчество: " + Clientfirstname + Environment.NewLine);
+
+                        richTextBoxTicket.AppendText("Билет: " + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Название: " + filmname + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Время просмотра: " + viewtime + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Зал: " + room + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Ряд: " + row + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Место: " + place + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Цена: " + price + Environment.NewLine);
+                    }
+                    else 
+                    {
+                        clients = clientTableAdapter1.GetData();
                         ClientProfRow = clients.FindByID(ClassforIDUsers.idU);
                         string Clientfirstname = ClientProfRow.FirstName;
                         string ClientLastname = ClientProfRow.LastName;
@@ -97,10 +148,11 @@ namespace Bessonova___Tickets
 
                         richTextBoxTicket.AppendText("Билет: " + Environment.NewLine);
                         richTextBoxTicket.AppendText("Название: " + title + Environment.NewLine);
-                    }
-                    else 
-                    {
-
+                        richTextBoxTicket.AppendText("Время просмотра: " + viewtime + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Зал: " + room + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Ряд: " + row + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Место: " + place + Environment.NewLine);
+                        richTextBoxTicket.AppendText("Цена: " + price + Environment.NewLine);
                     }
                     break;
             }

@@ -16,7 +16,7 @@ namespace Bessonova___Tickets
         {
             InitializeComponent();
         }
-
+        OrganaiserBLL organaiserfilm = new OrganaiserBLL();
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,7 +24,16 @@ namespace Bessonova___Tickets
 
         private void buttonaddfilm_Click(object sender, EventArgs e)
         {
-
+            string titlefilm, price;
+            int room, freeplace, idfilm;
+            TimeSpan viewtime;
+            titlefilm = textBoxName.Text;
+            price = textBoxPrice.Text;
+            freeplace = Convert.ToInt32(textBoxFreeplaces.Text);
+            viewtime = TimeSpan.Parse(textBoxTimeview.Text);
+            idfilm = Convert.ToInt32(textBoxIDNum.Text);
+            room = Convert.ToInt32(textBoxZal.Text);
+            organaiserfilm.AddFilms(idfilm, titlefilm, viewtime, room, freeplace, price);
         }
     }
 }

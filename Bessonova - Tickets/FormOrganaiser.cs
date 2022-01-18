@@ -40,9 +40,16 @@ namespace Bessonova___Tickets
 
         private void buttonListof_Click(object sender, EventArgs e)
         {
+            int ideventplace;
+            //Получили все данные
+            org = this.organaisersTableAdapter1.GetData();
+            //Ищем профиль того аккаунта, который вошел в систему
+            roworg = org.FindByID(ClassforIDUsers.idU);
+            ideventplace = roworg.IDEventPlace;
             FormListofEvents listofEvents = new FormListofEvents();
             this.Hide();
             listofEvents.ShowDialog();
+            listofEvents.IDEventPlace = ideventplace;
             this.Show();
         }
 

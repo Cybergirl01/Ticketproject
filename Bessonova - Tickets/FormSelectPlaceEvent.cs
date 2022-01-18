@@ -23,6 +23,7 @@ namespace Bessonova___Tickets
             FormBuyingTicketsIceSkate fbtice = new FormBuyingTicketsIceSkate();
             this.Hide();
             fbtice.ShowDialog();
+            fbtice.idEventplace = IDSkateEvent;
             this.Show();
         }
 
@@ -31,6 +32,7 @@ namespace Bessonova___Tickets
             int IDFilmEvent = 1;
             FormBuyingTicketsFilm fbtfilm = new FormBuyingTicketsFilm();
             this.Hide();
+            fbtfilm.idEventplace = IDFilmEvent;
             fbtfilm.ShowDialog();
             this.Show();
         }

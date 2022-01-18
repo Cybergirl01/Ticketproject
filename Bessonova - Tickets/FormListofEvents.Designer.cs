@@ -29,30 +29,20 @@ namespace Bessonova___Tickets
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonAddEvent = new System.Windows.Forms.Button();
+            this.dataGridViewEvents = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.labelHis = new System.Windows.Forms.Label();
+            this.buttonAddevent = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewEvents
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 349);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // buttonAddEvent
-            // 
-            this.buttonAddEvent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddEvent.Location = new System.Drawing.Point(13, 56);
-            this.buttonAddEvent.Name = "buttonAddEvent";
-            this.buttonAddEvent.Size = new System.Drawing.Size(161, 27);
-            this.buttonAddEvent.TabIndex = 1;
-            this.buttonAddEvent.Text = "Добавить";
-            this.buttonAddEvent.UseVisualStyleBackColor = true;
-            this.buttonAddEvent.Click += new System.EventHandler(this.buttonAddEvent_Click);
+            this.dataGridViewEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEvents.Location = new System.Drawing.Point(12, 89);
+            this.dataGridViewEvents.Name = "dataGridViewEvents";
+            this.dataGridViewEvents.Size = new System.Drawing.Size(776, 349);
+            this.dataGridViewEvents.TabIndex = 0;
             // 
             // buttonBack
             // 
@@ -65,25 +55,50 @@ namespace Bessonova___Tickets
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // labelHis
+            // 
+            this.labelHis.AutoSize = true;
+            this.labelHis.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHis.Location = new System.Drawing.Point(292, 17);
+            this.labelHis.Name = "labelHis";
+            this.labelHis.Size = new System.Drawing.Size(183, 21);
+            this.labelHis.TabIndex = 32;
+            this.labelHis.Text = "Список мероприятий";
+            // 
+            // buttonAddevent
+            // 
+            this.buttonAddevent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddevent.Location = new System.Drawing.Point(12, 53);
+            this.buttonAddevent.Name = "buttonAddevent";
+            this.buttonAddevent.Size = new System.Drawing.Size(193, 30);
+            this.buttonAddevent.TabIndex = 33;
+            this.buttonAddevent.Text = "Добавить";
+            this.buttonAddevent.UseVisualStyleBackColor = true;
+            this.buttonAddevent.Click += new System.EventHandler(this.buttonAddevent_Click);
+            // 
             // FormListofEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAddevent);
+            this.Controls.Add(this.labelHis);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.buttonAddEvent);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewEvents);
             this.Name = "FormListofEvents";
-            this.Text = "FormListofEvents";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Билетная система";
+            this.Load += new System.EventHandler(this.FormListofEvents_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonAddEvent;
+        private System.Windows.Forms.DataGridView dataGridViewEvents;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Label labelHis;
+        private System.Windows.Forms.Button buttonAddevent;
     }
 }

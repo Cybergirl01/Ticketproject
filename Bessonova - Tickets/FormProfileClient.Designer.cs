@@ -56,7 +56,7 @@ namespace Bessonova___Tickets
             this.labelAge = new System.Windows.Forms.Label();
             this.genderTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.GenderTableAdapter();
             this.usersTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.UsersTableAdapter();
-            this.clientProfTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.ClientProfTableAdapter();
+            this.clientTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.ClientTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.groupBoxinfo.SuspendLayout();
             this.SuspendLayout();
@@ -306,9 +306,9 @@ namespace Bessonova___Tickets
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // clientProfTableAdapter1
+            // clientTableAdapter1
             // 
-            this.clientProfTableAdapter1.ClearBeforeFill = true;
+            this.clientTableAdapter1.ClearBeforeFill = true;
             // 
             // FormProfileClient
             // 
@@ -376,6 +376,6 @@ namespace Bessonova___Tickets
         private DBTicketDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
         private System.Windows.Forms.Label labelIDNum;
         private System.Windows.Forms.Label labelAge;
-        private DBTicketDataSetTableAdapters.ClientProfTableAdapter clientProfTableAdapter1;
+        private DBTicketDataSetTableAdapters.ClientTableAdapter clientTableAdapter1;
     }
 }

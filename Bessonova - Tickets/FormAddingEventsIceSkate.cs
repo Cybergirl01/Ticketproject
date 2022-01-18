@@ -16,7 +16,7 @@ namespace Bessonova___Tickets
         {
             InitializeComponent();
         }
-
+        OrganaiserBLL organaiserICE = new OrganaiserBLL();
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,7 +24,16 @@ namespace Bessonova___Tickets
 
         private void buttonaddice_Click(object sender, EventArgs e)
         {
-
+            string titleice, price;
+            int room, freeplace;
+            TimeSpan viewtime;
+            titleice = textBoxName.Text;
+            price = textBoxPrice.Text;
+            room = Convert.ToInt32(textBoxZal.Text);
+            freeplace = Convert.ToInt32(textBoxFreeplaces.Text);
+            viewtime = TimeSpan.Parse(textBoxTimeview.Text);
+            
+            organaiserICE.AddIceskateEvent(titleice, viewtime, room, freeplace, price);
         }
     }
 }

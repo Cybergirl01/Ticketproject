@@ -34,6 +34,7 @@ namespace Bessonova___Tickets
             this.buttonProf = new System.Windows.Forms.Button();
             this.buttonGotosellTicket = new System.Windows.Forms.Button();
             this.sellerTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.SellerTableAdapter();
+            this.buttonShowtickets = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBack
@@ -83,11 +84,23 @@ namespace Bessonova___Tickets
             // 
             this.sellerTableAdapter1.ClearBeforeFill = true;
             // 
+            // buttonShowtickets
+            // 
+            this.buttonShowtickets.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonShowtickets.Location = new System.Drawing.Point(178, 222);
+            this.buttonShowtickets.Name = "buttonShowtickets";
+            this.buttonShowtickets.Size = new System.Drawing.Size(248, 30);
+            this.buttonShowtickets.TabIndex = 34;
+            this.buttonShowtickets.Text = "Просмотреть проданные билеты";
+            this.buttonShowtickets.UseVisualStyleBackColor = true;
+            this.buttonShowtickets.Click += new System.EventHandler(this.buttonShowtickets_Click);
+            // 
             // FormSeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 450);
+            this.Controls.Add(this.buttonShowtickets);
             this.Controls.Add(this.buttonGotosellTicket);
             this.Controls.Add(this.buttonProf);
             this.Controls.Add(this.buttonBack);
@@ -107,5 +120,6 @@ namespace Bessonova___Tickets
         private System.Windows.Forms.Button buttonProf;
         private System.Windows.Forms.Button buttonGotosellTicket;
         private DBTicketDataSetTableAdapters.SellerTableAdapter sellerTableAdapter1;
+        private System.Windows.Forms.Button buttonShowtickets;
     }
 }

@@ -86,5 +86,20 @@ namespace Bessonova___Tickets
                                     + Environment.NewLine + "Можете работать в системе");
             }
         }
+
+        private void buttonShowtickets_Click(object sender, EventArgs e)
+        {
+            int ideventplace;
+            //Получили все данные
+            sellers = this.sellerTableAdapter1.GetData();
+            //Ищем профиль того аккаунта, который вошел в систему
+            sellerRow = sellers.FindByID(ClassforIDUsers.idU);
+            ideventplace = sellerRow.IDEventPlace;
+            FormSellerticketlist fps = new FormSellerticketlist();
+            this.Hide();
+            fps.ShowDialog();
+            fps.IDEventPlace = ideventplace;
+            this.Show();
+        }
     }
 }

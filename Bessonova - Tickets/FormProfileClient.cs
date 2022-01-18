@@ -25,9 +25,9 @@ namespace Bessonova___Tickets
         DBTicketDataSet.UsersDataTable dataUsers;	//все данные из таблицы Users
         DBTicketDataSet.UsersRow rowUser;			//Отдельная строка таблицы
         //Данные по таблице Runners для редактирования
-        DBTicketDataSet.ClientProfDataTable dataClient;   //все данные из таблицы 
-        DBTicketDataSet.ClientProfRow rowClient;	//Отдельная строка таблицы
-
+        DBTicketDataSet.ClientDataTable dataClient;   //все данные из таблицы 
+        DBTicketDataSet.ClientRow rowClient;	//Отдельная строка таблицы
+       // ClientsBLL client = new ClientsBLL(); - unused code piece
         private void buttonPhotopick_Click(object sender, EventArgs e)
         {
             if (buttonPhotopick.Text == "Выбрать фото")
@@ -87,7 +87,7 @@ namespace Bessonova___Tickets
             try
             {
                 //Перенести измененные данные в БД
-                clientProfTableAdapter1.Update(rowClient);
+                clientTableAdapter1.Update(rowClient);
                 MessageBox.Show("Ваш профиль обновлен в системе");
                 buttonPhotopick.Enabled = false;
                 buttonBacktoMenu.Enabled = true;		//Открыт доступ к функционалу 
@@ -131,7 +131,7 @@ namespace Bessonova___Tickets
 
                 case "ViewEdit":
                     buttonUpdateprofile.Visible = true;
-                    dataClient = clientProfTableAdapter1.GetData(); 	//Все данные из таблицы
+                    dataClient = clientTableAdapter1.GetData(); 	//Все данные из таблицы
                     //Поиск среди них запись с нужным ID
                     rowClient = dataClient.FindByID(ClassforIDUsers.idU);
                     //Перенос данных из записи в элементы интерфейса
@@ -172,7 +172,7 @@ namespace Bessonova___Tickets
             }
             //Данные из списков ComboBox
             int idGender = (int)comboBoxGender.SelectedValue;
-            string birthday = Convert.ToString(dateTimePickerBirth.Value);
+            DateTime birthday = dateTimePickerBirth.Value;
 
 
            
@@ -186,7 +186,7 @@ namespace Bessonova___Tickets
             try
             {
                 //Метод Insert адаптера 
-                clientProfTableAdapter1.Insert(ClassforIDUsers.idU, firstName, Lastname, idGender, birthday, phone, wallet, photo);
+                clientTableAdapter1.Insert(ClassforIDUsers.idU, firstName, Lastname, idGender, birthday, phone, wallet, photo);
                 MessageBox.Show("Ваш профиль добавлен в систему");
                 buttonAddprofile.Visible = false;
                 buttonPhotopick.Enabled = false;

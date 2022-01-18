@@ -11,9 +11,9 @@ namespace Bessonova___Tickets
         DBTicketDataSetTableAdapters.FilmsTableAdapter film = new DBTicketDataSetTableAdapters.FilmsTableAdapter();
         DBTicketDataSetTableAdapters.IceSkateEventTableAdapter ice = new DBTicketDataSetTableAdapters.IceSkateEventTableAdapter();
 
-        public void AddFilms(int idfilm, string tit, TimeSpan time, int place, string price)
+        public void AddFilms(int idfilm, string tit, TimeSpan time, int room, int place, string price)
         {
-            film.Insert(idfilm, tit, time, place, price);
+            film.Insert(idfilm, tit, time, room, place, price);
         }
         public void AddIceskateEvent(string tit, TimeSpan time, int room, int place, string price)
         {

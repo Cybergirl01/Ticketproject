@@ -16,8 +16,9 @@ namespace Bessonova___Tickets
         SellerBLL sell = new SellerBLL();
         DBTicketDataSet.IceSkateEventDataTable iceskate;
         public int idEventplace;
-        ClientsBLL clients = new ClientsBLL();
-        TicketBLL tick = new TicketBLL();
+        //ClientsBLL clients = new ClientsBLL();
+        //TicketBLL tick = new TicketBLL();  - unused codes
+        //TicketDataSet.TicketsDataTable icetick;
         public FormSellingticketsIceSkate()
         {
             InitializeComponent();
@@ -31,52 +32,71 @@ namespace Bessonova___Tickets
         private void buttonSellTicket_Click(object sender, EventArgs e)
         {
             int zal, place, rad;
-            string ice, cli, price;
-            if (comboBoxClient.SelectedItem == null && comboBoxIce.SelectedItem == null)
+            
+            if (comboBoxIce.SelectedItem == null)
             {
                 MessageBox.Show("Выберите фильм и клиента!");
             }
             else
-            { iceskate = organaiser.ShowIceskateEvent();
+            {
+                iceskate = organaiser.ShowIceskateEvent();
                 for (int i = 0; i < iceskate.Count; i++)
                 {
-                    price = iceskate.ElementAt(i).Price;
-                    zal = (int)numericUpDownZal.Value;
-                    place = (int)numericUpDownPlace.Value;
-                    rad = (int)numericUpDownRad.Value;
-                    ice = (string)comboBoxIce.SelectedItem;
-                    cli = (string)comboBoxClient.SelectedItem;
-                    bool inact = false;
-                    DateTime dateTimeactive = DateTime.Now;
+                    if (comboBoxIce.SelectedIndex != 0)
+                    {
+                        string price = labelSum.Text;
+                        zal = (int)numericUpDownZal.Value;
+                        place = (int)numericUpDownPlace.Value;
+                        rad = (int)numericUpDownRad.Value;
 
-                    sell.SellTicket(idEventplace, zal, rad, place, dateTimeactive, price, inact);
-                    
+                        bool inact = false;
+                        DateTime dateTimeactive = DateTime.Now;
+
+                        sell.SellTicket(idEventplace, zal, rad, place, dateTimeactive, price, inact);
+                     
+
+                    }
                 }
-             }
+            }
         }
 
-        private void buttonViewTicket_Click(object sender, EventArgs e)
-        {
+            private void buttonViewTicket_Click(object sender, EventArgs e)
+            {
 
-            FormViewTIcket fvt = new FormViewTIcket("seller");
-            this.Hide();
-            fvt.ShowDialog();
+                FormViewTIcket fvt = new FormViewTIcket("seller");
+                this.Hide();
+                fvt.ShowDialog();
+            fvt.title = (string)comboBoxIce.SelectedItem;
+            fvt.viewtime = (TimeSpan)comboBoxTimeview.SelectedItem;
+            fvt.place = (int)numericUpDownPlace.Value;
+            fvt.price = labelSum.Text;
+            fvt.row = (int)numericUpDownRad.Value;
+            fvt.room = (int)numericUpDownZal.Value;
+            fvt.date = DateTime.Now;
+            fvt.IDEventPlace = idEventplace;
             this.Show();
-        }
+            }
 
-        private void FormSellingticketsIceSkate_Load(object sender, EventArgs e)
+
+        private void FormSellingticketsIceSkate_Load_1(object sender, EventArgs e)
         {
-            this.comboBoxIce.DataSource = organaiser.ShowIceskateEvent();
-            this.comboBoxIce.ValueMember = "ID";
-            this.comboBoxIce.DisplayMember = "Title";
-            this.comboBoxClient.DataSource = clients.GetDataofclient();
-            this.comboBoxClient.ValueMember = "ID";
-            this.comboBoxClient.DisplayMember = "FirstName" + "LastName";
+               this.comboBoxIce.DataSource = organaiser.ShowIceskateEvent();
+                this.comboBoxIce.ValueMember = "ID";
+                this.comboBoxIce.DisplayMember = "Title";
         }
 
         private void comboBoxIce_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string price;
+            iceskate = organaiser.ShowIceskateEvent();
+            for (int i = 0; i < iceskate.Count; i++)
+            {
+                price = iceskate.ElementAt(i).Price;
+                labelSum.Text = Convert.ToString(price);
+            }
         }
     }
-}
+ }
+
+    
+   

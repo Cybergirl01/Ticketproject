@@ -32,5 +32,41 @@ namespace Bessonova___Tickets
         {
             this.Close();
         }
+
+        private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (this.comboBoxFilter.Text)
+            {
+                case "Все":
+                    this.dataGridViewhis.DataSource = adminBLL.ShowHistory(); ;
+
+                    break;
+                case "Успешные":
+                    var filterTrue = adminBLL.ShowHistory().Where(rec => rec.Result == true);
+                    this.dataGridViewhis.DataSource = filterTrue.CopyToDataTable();
+
+                    break;
+                case "Неуспешные":
+                    var filterFalse = adminBLL.ShowHistory().Where(rec => rec.Result == false);
+                    this.dataGridViewhis.DataSource = filterFalse.CopyToDataTable();
+
+                    break;
+            }
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchString = this.textBoxSearch.Text;
+            var filter = adminBLL.ShowHistory().Where(rec => rec.Login.Contains(searchString));
+            if (filter.Count() != 0)
+            {
+                this.dataGridViewhis.DataSource = filter.CopyToDataTable();
+                this.dataGridViewhis.Columns["ID"].Visible = false;
+            }
+            else
+            {
+                this.dataGridViewhis.DataSource = null;
+            }
+        }
     }
 }

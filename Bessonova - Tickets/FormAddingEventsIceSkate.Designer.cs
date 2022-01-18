@@ -35,13 +35,13 @@ namespace Bessonova___Tickets
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxTimeview = new System.Windows.Forms.TextBox();
             this.labelTimeview = new System.Windows.Forms.Label();
-            this.textBoxIDNum = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labeladdiceskate = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonaddice = new System.Windows.Forms.Button();
+            this.textBoxZal = new System.Windows.Forms.TextBox();
+            this.labelZal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxPrice
@@ -83,7 +83,7 @@ namespace Bessonova___Tickets
             // textBoxTimeview
             // 
             this.textBoxTimeview.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxTimeview.Location = new System.Drawing.Point(181, 222);
+            this.textBoxTimeview.Location = new System.Drawing.Point(176, 170);
             this.textBoxTimeview.Name = "textBoxTimeview";
             this.textBoxTimeview.Size = new System.Drawing.Size(100, 29);
             this.textBoxTimeview.TabIndex = 17;
@@ -92,29 +92,11 @@ namespace Bessonova___Tickets
             // 
             this.labelTimeview.AutoSize = true;
             this.labelTimeview.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTimeview.Location = new System.Drawing.Point(18, 230);
+            this.labelTimeview.Location = new System.Drawing.Point(13, 178);
             this.labelTimeview.Name = "labelTimeview";
             this.labelTimeview.Size = new System.Drawing.Size(153, 21);
             this.labelTimeview.TabIndex = 16;
             this.labelTimeview.Text = "Время просмотра";
-            // 
-            // textBoxIDNum
-            // 
-            this.textBoxIDNum.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxIDNum.Location = new System.Drawing.Point(127, 170);
-            this.textBoxIDNum.Name = "textBoxIDNum";
-            this.textBoxIDNum.Size = new System.Drawing.Size(76, 29);
-            this.textBoxIDNum.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(22, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 21);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Номер (ID)";
             // 
             // textBoxName
             // 
@@ -166,11 +148,31 @@ namespace Bessonova___Tickets
             this.buttonaddice.UseVisualStyleBackColor = true;
             this.buttonaddice.Click += new System.EventHandler(this.buttonaddice_Click);
             // 
+            // textBoxZal
+            // 
+            this.textBoxZal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxZal.Location = new System.Drawing.Point(105, 221);
+            this.textBoxZal.Name = "textBoxZal";
+            this.textBoxZal.Size = new System.Drawing.Size(100, 29);
+            this.textBoxZal.TabIndex = 26;
+            // 
+            // labelZal
+            // 
+            this.labelZal.AutoSize = true;
+            this.labelZal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelZal.Location = new System.Drawing.Point(34, 229);
+            this.labelZal.Name = "labelZal";
+            this.labelZal.Size = new System.Drawing.Size(37, 21);
+            this.labelZal.TabIndex = 25;
+            this.labelZal.Text = "Зал";
+            // 
             // FormAddingEventsIceSkate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxZal);
+            this.Controls.Add(this.labelZal);
             this.Controls.Add(this.buttonaddice);
             this.Controls.Add(this.labeladdiceskate);
             this.Controls.Add(this.buttonBack);
@@ -180,12 +182,10 @@ namespace Bessonova___Tickets
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxTimeview);
             this.Controls.Add(this.labelTimeview);
-            this.Controls.Add(this.textBoxIDNum);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelName);
             this.Name = "FormAddingEventsIceSkate";
-            this.Text = "FormAddingEventsIceSkate";
+            this.Text = "Билетная система";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,12 +199,12 @@ namespace Bessonova___Tickets
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxTimeview;
         private System.Windows.Forms.Label labelTimeview;
-        private System.Windows.Forms.TextBox textBoxIDNum;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labeladdiceskate;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonaddice;
+        private System.Windows.Forms.TextBox textBoxZal;
+        private System.Windows.Forms.Label labelZal;
     }
 }

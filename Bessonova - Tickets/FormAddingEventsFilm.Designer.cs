@@ -42,6 +42,8 @@ namespace Bessonova___Tickets
             this.label5 = new System.Windows.Forms.Label();
             this.labeladdfilm = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.textBoxZal = new System.Windows.Forms.TextBox();
+            this.labelZal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -166,11 +168,31 @@ namespace Bessonova___Tickets
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // textBoxZal
+            // 
+            this.textBoxZal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxZal.Location = new System.Drawing.Point(518, 197);
+            this.textBoxZal.Name = "textBoxZal";
+            this.textBoxZal.Size = new System.Drawing.Size(100, 29);
+            this.textBoxZal.TabIndex = 28;
+            // 
+            // labelZal
+            // 
+            this.labelZal.AutoSize = true;
+            this.labelZal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelZal.Location = new System.Drawing.Point(447, 205);
+            this.labelZal.Name = "labelZal";
+            this.labelZal.Size = new System.Drawing.Size(37, 21);
+            this.labelZal.TabIndex = 27;
+            this.labelZal.Text = "Зал";
+            // 
             // FormAddingEventsFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxZal);
+            this.Controls.Add(this.labelZal);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labeladdfilm);
             this.Controls.Add(this.textBoxPrice);
@@ -185,7 +207,7 @@ namespace Bessonova___Tickets
             this.Controls.Add(this.buttonaddfilm);
             this.Controls.Add(this.labelName);
             this.Name = "FormAddingEventsFilm";
-            this.Text = "FormAddingEventsFilm";
+            this.Text = "Билетная система";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +228,7 @@ namespace Bessonova___Tickets
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labeladdfilm;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox textBoxZal;
+        private System.Windows.Forms.Label labelZal;
     }
 }

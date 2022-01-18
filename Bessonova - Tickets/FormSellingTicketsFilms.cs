@@ -23,8 +23,7 @@ namespace Bessonova___Tickets
         DBTicketDataSet.SellerDataTable sel;
         DBTicketDataSet.SellerRow rowseller;
         DBTicketDataSet.FilmsDataTable filmslist;
-        DBTicketDataSet.TicketsDataTable tickets;
-        DBTicketDataSet.TicketsRow tick;
+       // TicketBLL ticket = new TicketBLL(); - unused
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,20 +40,18 @@ namespace Bessonova___Tickets
         }
 
         private void buttonViewTicket_Click(object sender, EventArgs e)
-        {   sel = sell.showSeller();
-            rowseller = sel.FindByID(ClassforIDUsers.idU);
-            int sellerid = rowseller.ID;
+        {   
             
             FormViewTIcket fvt = new FormViewTIcket("seller");
             this.Hide();
             fvt.ShowDialog();
+            fvt.filmname = (string)comboBoxFilm.SelectedItem;
             fvt.place = (int)numericUpDownPlace.Value;
             fvt.price = labelSum.Text;
             fvt.row = (int)numericUpDownRad.Value;
             fvt.room = (int)numericUpDownZal.Value;
             fvt.date = DateTime.Now;
-            fvt.nameclient = (string)comboBoxClient.SelectedItem;
-            fvt.IDSeller = sellerid;
+            fvt.viewtime = (TimeSpan)comboBoxTimeview.SelectedItem;
             fvt.IDEventPlace = idEventplace;
             this.Show();
         }
@@ -62,26 +59,29 @@ namespace Bessonova___Tickets
         private void buttonSellTicket_Click(object sender, EventArgs e)
         {
             int zal, place, rad;
-            string film, cli, price;
-            if (comboBoxClient.SelectedItem == null && comboBoxFilm.SelectedItem == null)
+            
+            if (comboBoxFilm.SelectedItem == null)
             {
-                MessageBox.Show("Выберите фильм и клиента!");
+                MessageBox.Show("Выберите фильм!");
             }
             else
             {
                 filmslist = organaiser.ShowFilms();
                 for (int i = 0; i < filmslist.Count; i++)
-                {
-                    price = filmslist.ElementAt(i).Price;
-                    zal = (int)numericUpDownZal.Value;
-                    place = (int)numericUpDownPlace.Value;
-                    rad = (int)numericUpDownRad.Value;
-                    film = (string)comboBoxFilm.SelectedItem;
-                    cli = (string)comboBoxClient.SelectedItem;
-                    bool inact = false;
-                    DateTime dateTimeactive = DateTime.Now;
+                {if (comboBoxFilm.SelectedItem != null)
+                    {
+                        string price = labelSum.Text;
+                        zal = (int)numericUpDownZal.Value;
+                        place = (int)numericUpDownPlace.Value;
+                        rad = (int)numericUpDownRad.Value;
+                        bool inact = false;
+                        DateTime dateTimeactive = DateTime.Now;
 
-                    sell.SellTicket(idEventplace, zal, rad, place, dateTimeactive, price, inact);
+                        sell.SellTicket(idEventplace, zal, rad, place, dateTimeactive, price, inact);
+                        
+
+                    }
+
                 }
             }
         }

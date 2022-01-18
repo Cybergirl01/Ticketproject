@@ -1,7 +1,7 @@
 ﻿
 namespace Bessonova___Tickets
 {
-    partial class FormMyTicketList
+    partial class FormSellerticketlist
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,21 @@ namespace Bessonova___Tickets
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanelTicket = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.ticketClientTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.TicketClientTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelTicket = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelTicket
+            // buttonBack
             // 
-            this.flowLayoutPanelTicket.Location = new System.Drawing.Point(12, 50);
-            this.flowLayoutPanelTicket.Name = "flowLayoutPanelTicket";
-            this.flowLayoutPanelTicket.Size = new System.Drawing.Size(442, 388);
-            this.flowLayoutPanelTicket.TabIndex = 0;
-            this.flowLayoutPanelTicket.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelTicket_Paint);
+            this.buttonBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(476, 9);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(123, 35);
+            this.buttonBack.TabIndex = 5;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -50,26 +52,17 @@ namespace Bessonova___Tickets
             this.label1.Location = new System.Drawing.Point(145, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 21);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Список билетов";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // buttonBack
+            // flowLayoutPanelTicket
             // 
-            this.buttonBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(476, 9);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(123, 35);
-            this.buttonBack.TabIndex = 2;
-            this.buttonBack.Text = "Назад";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.flowLayoutPanelTicket.Location = new System.Drawing.Point(12, 50);
+            this.flowLayoutPanelTicket.Name = "flowLayoutPanelTicket";
+            this.flowLayoutPanelTicket.Size = new System.Drawing.Size(442, 388);
+            this.flowLayoutPanelTicket.TabIndex = 3;
             // 
-            // ticketClientTableAdapter1
-            // 
-            this.ticketClientTableAdapter1.ClearBeforeFill = true;
-            // 
-            // FormMyTicketList
+            // FormSellerticketlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,9 +70,9 @@ namespace Bessonova___Tickets
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanelTicket);
-            this.Name = "FormMyTicketList";
+            this.Name = "FormSellerticketlist";
             this.Text = "Билетная система";
-            this.Load += new System.EventHandler(this.FormMyTicketList_Load);
+            this.Load += new System.EventHandler(this.FormSellerticketlist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,9 +80,8 @@ namespace Bessonova___Tickets
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTicket;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBack;
-        private DBTicketDataSetTableAdapters.TicketClientTableAdapter ticketClientTableAdapter1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTicket;
     }
 }

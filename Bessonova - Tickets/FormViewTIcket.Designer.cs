@@ -35,10 +35,9 @@ namespace Bessonova___Tickets
             this.pictureBoxQR = new System.Windows.Forms.PictureBox();
             this.buttonSaveQRCode = new System.Windows.Forms.Button();
             this.labelViewingticket = new System.Windows.Forms.Label();
-            this.clientProfTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.ClientProfTableAdapter();
-            this.iceSkateEventTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.IceSkateEventTableAdapter();
-            this.filmsTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.FilmsTableAdapter();
-            this.filmTicketsTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.FilmTicketsTableAdapter();
+            this.clientTableAdapter1 = new Bessonova___Tickets.DBTicketDataSetTableAdapters.ClientTableAdapter();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,27 +100,31 @@ namespace Bessonova___Tickets
             this.labelViewingticket.TabIndex = 6;
             this.labelViewingticket.Text = "Просмотр билета";
             // 
-            // clientProfTableAdapter1
+            // clientTableAdapter1
             // 
-            this.clientProfTableAdapter1.ClearBeforeFill = true;
+            this.clientTableAdapter1.ClearBeforeFill = true;
             // 
-            // iceSkateEventTableAdapter1
+            // buttonPrint
             // 
-            this.iceSkateEventTableAdapter1.ClearBeforeFill = true;
+            this.buttonPrint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPrint.Location = new System.Drawing.Point(687, 361);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(193, 29);
+            this.buttonPrint.TabIndex = 7;
+            this.buttonPrint.Text = "Печатать билет";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
-            // filmsTableAdapter1
+            // printDialog1
             // 
-            this.filmsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // filmTicketsTableAdapter1
-            // 
-            this.filmTicketsTableAdapter1.ClearBeforeFill = true;
+            this.printDialog1.UseEXDialog = true;
             // 
             // FormViewTIcket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 525);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.labelViewingticket);
             this.Controls.Add(this.buttonSaveQRCode);
             this.Controls.Add(this.pictureBoxQR);
@@ -145,9 +148,8 @@ namespace Bessonova___Tickets
         private System.Windows.Forms.PictureBox pictureBoxQR;
         private System.Windows.Forms.Button buttonSaveQRCode;
         private System.Windows.Forms.Label labelViewingticket;
-        private DBTicketDataSetTableAdapters.ClientProfTableAdapter clientProfTableAdapter1;
-        private DBTicketDataSetTableAdapters.IceSkateEventTableAdapter iceSkateEventTableAdapter1;
-        private DBTicketDataSetTableAdapters.FilmsTableAdapter filmsTableAdapter1;
-        private DBTicketDataSetTableAdapters.FilmTicketsTableAdapter filmTicketsTableAdapter1;
+        private DBTicketDataSetTableAdapters.ClientTableAdapter clientTableAdapter1;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

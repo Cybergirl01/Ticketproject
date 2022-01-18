@@ -30,8 +30,6 @@ namespace Bessonova___Tickets
         private void InitializeComponent()
         {
             this.buttonViewTicket = new System.Windows.Forms.Button();
-            this.labelClient = new System.Windows.Forms.Label();
-            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelSelFilm = new System.Windows.Forms.Label();
             this.numericUpDownRad = new System.Windows.Forms.NumericUpDown();
@@ -43,6 +41,10 @@ namespace Bessonova___Tickets
             this.labelEventname = new System.Windows.Forms.Label();
             this.comboBoxIce = new System.Windows.Forms.ComboBox();
             this.buttonSellTicket = new System.Windows.Forms.Button();
+            this.labelSum = new System.Windows.Forms.Label();
+            this.labelItog = new System.Windows.Forms.Label();
+            this.labelViewtime = new System.Windows.Forms.Label();
+            this.comboBoxTimeview = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZal)).BeginInit();
@@ -58,25 +60,6 @@ namespace Bessonova___Tickets
             this.buttonViewTicket.Text = "Просмотреть билет";
             this.buttonViewTicket.UseVisualStyleBackColor = true;
             this.buttonViewTicket.Click += new System.EventHandler(this.buttonViewTicket_Click);
-            // 
-            // labelClient
-            // 
-            this.labelClient.AutoSize = true;
-            this.labelClient.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelClient.Location = new System.Drawing.Point(29, 237);
-            this.labelClient.Name = "labelClient";
-            this.labelClient.Size = new System.Drawing.Size(53, 21);
-            this.labelClient.TabIndex = 48;
-            this.labelClient.Text = "Кому";
-            // 
-            // comboBoxClient
-            // 
-            this.comboBoxClient.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(130, 236);
-            this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(201, 29);
-            this.comboBoxClient.TabIndex = 47;
             // 
             // buttonBack
             // 
@@ -199,14 +182,54 @@ namespace Bessonova___Tickets
             this.buttonSellTicket.UseVisualStyleBackColor = true;
             this.buttonSellTicket.Click += new System.EventHandler(this.buttonSellTicket_Click);
             // 
+            // labelSum
+            // 
+            this.labelSum.AutoSize = true;
+            this.labelSum.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSum.Location = new System.Drawing.Point(106, 298);
+            this.labelSum.Name = "labelSum";
+            this.labelSum.Size = new System.Drawing.Size(0, 21);
+            this.labelSum.TabIndex = 51;
+            // 
+            // labelItog
+            // 
+            this.labelItog.AutoSize = true;
+            this.labelItog.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelItog.Location = new System.Drawing.Point(29, 298);
+            this.labelItog.Name = "labelItog";
+            this.labelItog.Size = new System.Drawing.Size(63, 21);
+            this.labelItog.TabIndex = 50;
+            this.labelItog.Text = "Итого:";
+            // 
+            // labelViewtime
+            // 
+            this.labelViewtime.AutoSize = true;
+            this.labelViewtime.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelViewtime.Location = new System.Drawing.Point(438, 223);
+            this.labelViewtime.Name = "labelViewtime";
+            this.labelViewtime.Size = new System.Drawing.Size(153, 21);
+            this.labelViewtime.TabIndex = 67;
+            this.labelViewtime.Text = "Время просмотра";
+            // 
+            // comboBoxTimeview
+            // 
+            this.comboBoxTimeview.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxTimeview.FormattingEnabled = true;
+            this.comboBoxTimeview.Location = new System.Drawing.Point(597, 220);
+            this.comboBoxTimeview.Name = "comboBoxTimeview";
+            this.comboBoxTimeview.Size = new System.Drawing.Size(118, 29);
+            this.comboBoxTimeview.TabIndex = 66;
+            // 
             // FormSellingticketsIceSkate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 474);
+            this.Controls.Add(this.labelViewtime);
+            this.Controls.Add(this.comboBoxTimeview);
+            this.Controls.Add(this.labelSum);
+            this.Controls.Add(this.labelItog);
             this.Controls.Add(this.buttonViewTicket);
-            this.Controls.Add(this.labelClient);
-            this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelSelFilm);
             this.Controls.Add(this.numericUpDownRad);
@@ -220,7 +243,7 @@ namespace Bessonova___Tickets
             this.Controls.Add(this.buttonSellTicket);
             this.Name = "FormSellingticketsIceSkate";
             this.Text = "Билетная система";
-            this.Load += new System.EventHandler(this.FormSellingticketsIceSkate_Load);
+            this.Load += new System.EventHandler(this.FormSellingticketsIceSkate_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZal)).EndInit();
@@ -232,8 +255,6 @@ namespace Bessonova___Tickets
         #endregion
 
         private System.Windows.Forms.Button buttonViewTicket;
-        private System.Windows.Forms.Label labelClient;
-        private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelSelFilm;
         private System.Windows.Forms.NumericUpDown numericUpDownRad;
@@ -245,5 +266,9 @@ namespace Bessonova___Tickets
         private System.Windows.Forms.Label labelEventname;
         private System.Windows.Forms.ComboBox comboBoxIce;
         private System.Windows.Forms.Button buttonSellTicket;
+        private System.Windows.Forms.Label labelSum;
+        private System.Windows.Forms.Label labelItog;
+        private System.Windows.Forms.Label labelViewtime;
+        private System.Windows.Forms.ComboBox comboBoxTimeview;
     }
 }

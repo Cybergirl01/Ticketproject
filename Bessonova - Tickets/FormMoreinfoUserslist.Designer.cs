@@ -98,7 +98,7 @@ namespace Bessonova___Tickets
             this.Controls.Add(this.flowLayoutPanelClient);
             this.Controls.Add(this.flowLayoutPanelInfousers);
             this.Name = "FormMoreinfoUserslist";
-            this.Text = "FormMoreinfoUserslist";
+            this.Text = "Билетная система";
             this.Load += new System.EventHandler(this.FormMoreinfoUserslist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

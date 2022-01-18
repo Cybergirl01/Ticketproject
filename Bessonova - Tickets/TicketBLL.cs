@@ -9,8 +9,7 @@ namespace Bessonova___Tickets
     public class TicketBLL
     {
         DBTicketDataSetTableAdapters.TicketsTableAdapter Tick= new DBTicketDataSetTableAdapters.TicketsTableAdapter();
-        DBTicketDataSetTableAdapters.SellingTicketTableAdapter selltick = new DBTicketDataSetTableAdapters.SellingTicketTableAdapter();
-       
+       // DBTicketDataSetTableAdapters.SellingTicketTableAdapter selltick = new DBTicketDataSetTableAdapters.SellingTicketTableAdapter(); - unused code       
 
 
         public DBTicketDataSet.TicketsDataTable ShowTickets()
@@ -19,11 +18,11 @@ namespace Bessonova___Tickets
         }
 
 
-        public void SellTikets(int IDCLI, int idsell, int idtick)
+      /*  public void SellTikets(int idsell, int idtick)
         {
-            selltick.Insert(IDCLI, idsell, idtick);
+            selltick.Insert(idsell, idtick);
         }
-
+      */ //- unused
         public void buyingTicket(int eventpl, int room, int row, int place, DateTime actvive, string price, bool inact)
         {
             if (inact == true)
